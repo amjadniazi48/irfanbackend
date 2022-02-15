@@ -15,5 +15,17 @@ module.exports = ({ env }) => ({
 
         },
     },
-    // ...
+    email: {
+        config: {
+          provider: 'sendgrid',
+          providerOptions: {
+            apiKey: env('SENDGRID_API_KEY'),
+          },
+          settings: {
+            defaultFrom: 'amjad@sonnetsolution.com',
+            defaultReplyTo: 'amjd@sonnetsolution.com',
+            testAddress: 'amjad@sonnetsolution.com',
+          },
+        },
+      },
 });
